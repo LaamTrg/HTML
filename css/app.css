@@ -1,0 +1,21 @@
+body{
+    background-image: url('../images/GArNzIFWsAAYqm4.jpg');
+    background-size: cover;
+    background-position: center ;
+}
+h1{
+    color: #2c3a15;
+}
+p{
+    color: #0e5202;
+    font-size: 30px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    text-align: left;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: normal; /* 100-thin 200-semi-light 300-light 400-normal 500-medium 600-semibold 700-bold 800-extrabold 900-black */
+    background-color: #d5c097;
+    width: 600px;
+    border-bottom: 5px solid #291e07;
+}
