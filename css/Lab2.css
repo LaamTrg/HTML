@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+h4{
+    color: gray;
+}
+table{
+    text-align: center;
+    width: 100%;
+}
