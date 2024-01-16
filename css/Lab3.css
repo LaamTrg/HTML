@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+}
+.profile{
+    float: left;
+    width: 35%;
+    height: 808px;
+    background-image: url('../images/pngtree-modern-simple-elegant-gradinet-green.jpg');
+}
+.profile img{
+    max-width: 50%;
+    margin: 20% 25%;
+    border-radius: 100%;
+}
+.profile h2{
+    color: yellow;
+}
+.profile p{
+    border-bottom: 2px solid white;
+}
+.profile-text{
+    color: white;
+    margin: 20px 20%;
+}
+.info{
+    height: 808px;
+    float: left;
+    width: 65%;
+    background-color: whitesmoke;
+}
+.info h1, h2{
+    color: darkgreen;
+}
+.info p{
+    border-bottom: 2px solid gray;
+}
+#info-margin{
+    margin: 10% 20%;
+}
+#head{
+    color: white;
+    background-color: green;
+    border-radius: 4px;
+    width: 50px;
+    padding: 3px 20px;
+    margin-right: 10px;
+}
+#i{
+    border: 1px solid black;
+    width: 5px;
+    border-radius: 100%;
+    padding: 0 8px;
+}
+#head-i{
+    display: flex;
+}
+#employment{
+    position: relative;
+    border: 2px solid green;
+    padding: 0 5%;
+    width: 80%;
+}
