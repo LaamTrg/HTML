@@ -1,17 +1,17 @@
 #bd #bx #ph{
-
+    color: blueviolet;
 }
 body .box #ph{
-
+    color: white;
 }
 #ph{
-    color: orangered ;
+    color: orangered;
 }
 body .box .grah{
-
+    color: lime;
 }
 .box > .grah{
-    
+    color: darkred;
 }
 .box .grah{
     color: blue;
