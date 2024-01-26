@@ -1,18 +1,32 @@
 function muaVe() {
-    let ve = [];
+    var ve = [];
     while (ve.length < 6) {
-        let soNgauNhien = Math.floor(Math.random() * 46);
-        if (!ve.includes(soNgauNhien)) {
+        var soNgauNhien = Math.floor(Math.random() * 46);
+        if (ve.indexOf(soNgauNhien) === -1) {
             ve.push(soNgauNhien);
         }
     }
     return ve;
 }
 
+function nhapVe() {
+    var ve = [];
+    for (var i = 0; i < 6; i++) {
+        var so = parseInt(prompt("Nhập số thứ " + (i + 1) + " (từ 0 đến 45):"));
+        while (isNaN(so) || so < 0 || so > 45 || ve.includes(so)) {
+            alert("Vui lòng nhập một số hợp lệ và chưa được chọn trước đó.");
+            so = parseInt(prompt("Nhập số thứ " + (i + 1) + " (từ 0 đến 45):"));
+        }
+        ve.push(so);
+    }
+    return ve;
+}
+
 function kiemTraTrungGiai(veNguoiChoi, veMay) {
-    let soTrungGiai = 0;
-    for (let so of veNguoiChoi) {
-        if (veMay.includes(so)) {
+    var soTrungGiai = 0;
+    for (var i = 0; i < veNguoiChoi.length; i++) {
+        var so = veNguoiChoi[i];
+        if (veMay.indexOf(so) !== -1) {
             soTrungGiai++;
         }
     }
@@ -20,32 +34,25 @@ function kiemTraTrungGiai(veNguoiChoi, veMay) {
 }
 
 function choiVietlot() {
-    let veNguoiChoi = muaVe();
-    console.log("Vé của bạn: " + veNguoiChoi.join(", "));
+    var veNguoiChoi = nhapVe();
+    alert("Vé của bạn: " + veNguoiChoi.join(", "));
 
-    let veMay = muaVe();
-    console.log("Bộ số của máy: " + veMay.join(", "));
+    var veMay = muaVe();
+    alert("Số trúng giải: " + veMay.join(", "));
 
-    let soTrungGiai = kiemTraTrungGiai(veNguoiChoi, veMay);
-    console.log("Số trúng giải: " + soTrungGiai);
+    var soTrungGiai = kiemTraTrungGiai(veNguoiChoi, veMay);
+    alert("Số vé bạn trúng: " + soTrungGiai);
 
-    switch (soTrungGiai) {
-        case 1:
-        case 2:
-            console.log("Chúc bạn may mắn lần sau! Không trúng giải.");
-            break;
-        case 3:
-            console.log("Chúc mừng! Bạn trúng giải 100.000 VND.");
-            break;
-        case 4:
-            console.log("Xin chúc mừng! Bạn trúng giải 10.000.000 VND.");
-            break;
-        case 5:
-            console.log("Chúc mừng! Bạn trúng Jackpot - 100 tỷ VND!");
-            break;
-        case 6:
-            console.log("Chúc mừng! Bạn là người trúng giải Jackpot lớn nhất!");
-            break;
+    if (soTrungGiai == 0 || soTrungGiai == 1 || soTrungGiai == 2) {
+        alert("Chúc may mắn lần sau.");
+    } else if (soTrungGiai == 3) {
+        alert("Chúc mừng bạn trúng 100.000 VND");
+    } else if (soTrungGiai == 4) {
+        alert("Chúc mừng bạn trúng 10.000.000 VND");
+    } else if (soTrungGiai == 5) {
+        alert("Chúc mừng bạn trúng 100 tỷ VND");
+    } else if (soTrungGiai == 6) {
+        alert("Chúc mừng bạn trúng 1.000 tỷ VND");
     }
 }
 
