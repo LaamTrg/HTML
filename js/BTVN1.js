@@ -1,8 +1,8 @@
 function muaVe(){
     var ve = [];
-    while (ve.length < 6){
+    while(ve.length < 6){
         var soNgauNhien = Math.floor(Math.random() * 46);
-        if (ve.indexOf(soNgauNhien) === -1){
+        if(ve.indexOf(soNgauNhien) == -1){
             ve.push(soNgauNhien);
         }
     }
@@ -24,9 +24,9 @@ function nhapVe(){
 
 function kiemTraTrungGiai(veNguoiChoi, veMay){
     var soTrungGiai = 0;
-    for (var i = 0; i < veNguoiChoi.length; i++) {
+    for(var i = 0; i < veNguoiChoi.length; i++){
         var so = veNguoiChoi[i];
-        if (veMay.indexOf(so) !== -1){
+        if(veMay.indexOf(so) !== -1){
             soTrungGiai++;
         }
     }
