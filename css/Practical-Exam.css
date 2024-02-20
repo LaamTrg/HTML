@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: antiquewhite;
     font-family: "Open Sans", sans-serif;
 }
 #body{
@@ -12,14 +11,14 @@
     margin: 10px;
 }
 #twitter{
+    padding: 3px 5px;
     display: inline-flex;
-    border: 1px solid black;
     text-decoration: none;
     color: black;
 }
 #facebook{
+    padding: 3px 5px;
     display: inline-flex;
-    border: 1px solid black;
     text-decoration: none;
     color: black;
 }
@@ -29,9 +28,6 @@
 #facebook-back a{
     background-color: blue;
 }
-.line{
-    border-bottom: 1px black solid;
-}
-#submit button .hover {
+#submit button .hover{
     cursor: pointer;
 }

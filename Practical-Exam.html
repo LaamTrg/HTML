@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
-<body>
     <body id="body">
         <h1>Create Account</h1>
         <h4>Get started with your free account</h4>
@@ -26,11 +25,11 @@
             </a>
         </div>
         <div>
-            <span class="line"></span>
+            <p class="line"></p>
             <p>OR</p>
-            <span class="line"></span>
+            <p class="line"></p>
         </div>
-        <form action="#" method="post">
+        <form id="form" action="#" method="post">
             <div>
                 <label for="username">👤</label>
                 <input type="text" id="username" name="username" placeholder="Full name">
@@ -41,7 +40,7 @@
             </div>
             <div>
                 <label for="phone">☎</label>
-                <select>
+                <select id="phoneCountryCode">
                     <option>+84</option>
                     <option>+1</option>
                     <option>+7</option>
@@ -53,7 +52,7 @@
             </div>
             <div>
                 <label for="job">🏛</label>
-                <select>
+                <select id="job">
                     <option>Select job type</option>
                     <option>Designer</option>
                     <option>Manager</option>
@@ -69,9 +68,28 @@
                 <input type="password" id="repeat" name="repeat_password" placeholder="Repeat password">
             </div>
             <div id="submit">
-                <button type="submit">Register</button>
+                <button type="button" onclick="register()">Register</button>
             </div>
         </form>
+        <script>
+            function register(){
+                var username = document.getElementById("username").value;
+                var email = document.getElementById("email").value;
+                var phone = document.getElementById("phone").value;
+                var job = document.getElementById("job").value;
+                var password = document.getElementById("password").value;
+                var repeatPassword = document.getElementById("repeat").value;
+
+                if(username === "" || email === "" || phone === "" || job === "" || password === "" || repeatPassword === "") {
+                    alert("Please fill in all fields.");
+                    return;
+                }
+                if(password !== repeatPassword){
+                    alert("Passwords do not match.");
+                    return;
+                }
+                document.getElementById("form").submit();
+            }
+        </script>
     </body>
-</body>
 </html>
