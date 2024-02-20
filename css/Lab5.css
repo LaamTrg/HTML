@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#section{
+    background-color: aqua;
+}
+.box{
+    float: left;
+    height: 150px;
+    padding: 30px;
+    width: calc(25% - 62px);
+    border: 1px solid red;
+    list-style: none;
+}
+.box img{
+    width: 100px;
+    height: 100px;
+}
+#date{
+    border: 1px solid black;
+}
+#temp{
+    float: left;
+    border: 1px solid black;
+}
+#image{
+    float: right;
+    border: 1px solid black;
+}

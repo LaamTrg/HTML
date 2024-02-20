@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    font-family: "Open Sans", sans-serif;
+}
+#body{
+    text-align: center;
+    margin: 50px 0;
+}
+#body div{
+    margin: 10px;
+}
+#twitter{
+    display: inline-flex;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+#facebook{
+    display: inline-flex;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+#twitter-back a{
+    background-color: aqua;
+}
+#facebook-back a{
+    background-color: blue;
+}
+.line{
+    border-bottom: 1px black solid;
+}
+#submit button .hover {
+    cursor: pointer;
+}

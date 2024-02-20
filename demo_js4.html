@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Js4</title>
+</head>
+<body>
+    <input id="ip1" onkeydown="demo1(this)" onkeyup="demo2(this)" type="text" name="demo" placeholder="Enter..">
+    <input id="ip2" onkeydown="demo1(this)" onkeyup="demo2(this)" type="text" name="demo" placeholder="Enter..">
+    <select id="slct" onchange="demo3(this)">
+        <option value="HN">HN</option>
+        <option value="SG">SG</option>
+        <option value="HP">HP</option>
+        <option value="BN">BN</option>
+    </select>
+    <script type="text/javascript">
+        function demo1(e){
+            console.log(e.value);
+        }
+        function demo2(e){
+            console.log(e.value);
+        }
+        function demo3(ct){
+            alert(ct.value);
+        }
+    </script>
+</body>
+</html>
